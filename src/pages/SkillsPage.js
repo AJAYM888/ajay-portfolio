@@ -1,15 +1,15 @@
 import React from 'react';
-import { Award, Shield, ExternalLink, Code, Brain, Cloud, Database, Network } from 'lucide-react';
+import { Award, Shield, ExternalLink, Code, Brain, Cloud, Network } from 'lucide-react';
 import { skills, certifications, skillLinks } from '../data/portfolioData';
 
 const SkillsPage = ({ isDarkMode }) => {
   const getCategoryIcon = (category) => {
     const icons = {
-      "Programming Languages": Code,
-      "Machine Learning & Deep Learning": Brain,
-      "Generative AI & NLP": Brain,
-      "Cloud & Deployment": Cloud,
-      "Knowledge Graphs": Network
+      'Programming Languages': Code,
+      'Machine Learning & Deep Learning': Brain,
+      'Generative AI & NLP': Brain,
+      'Cloud & Deployment': Cloud,
+      'Knowledge Graphs': Network
     };
     return icons[category] || Code;
   };
@@ -55,7 +55,7 @@ const SkillsPage = ({ isDarkMode }) => {
 
   return (
     <div className="min-h-screen pt-20 bg-white dark:bg-black transition-colors duration-300">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-6xl mx-auto px-3 sm:px-4 md:px-6 py-8">
         
         {/* Header Section */}
         <div className="text-center mb-12">
@@ -94,7 +94,7 @@ const SkillsPage = ({ isDarkMode }) => {
                       className="flex items-center p-2 rounded-lg bg-gray-50 dark:bg-gray-800 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors cursor-pointer"
                       onClick={() => {
                         const link = skillLinks[skill.name];
-                        console.log('Clicking skill:', skill.name, 'Link:', link); // Debug log
+                        console.log('Clicking skill:', skill.name, 'Link:', link);
                         if (link) {
                           window.open(link, '_blank', 'noopener,noreferrer');
                         }
@@ -129,7 +129,7 @@ const SkillsPage = ({ isDarkMode }) => {
           
           <div className="grid md:grid-cols-2 gap-6">
             {certifications.map((cert, index) => (
-              <div 
+              <div
                 key={index}
                 className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6"
               >
@@ -151,20 +151,34 @@ const SkillsPage = ({ isDarkMode }) => {
                       {cert.description}
                     </p>
                     <p className="text-xs text-gray-500">
-                      {cert.issuer} • {cert.year}
+                      {cert.issuer} • {cert.dateIssued || cert.year}
                     </p>
                   </div>
                 </div>
-                
-                <a
-                  href={cert.verifyLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
-                >
-                  View Documentation
-                  <ExternalLink size={14} className="ml-1" />
-                </a>
+
+                <div className="space-y-3">
+                  <div>
+                    <a
+                      href={cert.verifyLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
+                    >
+                      📄 View Documentation
+                    </a>
+                  </div>
+                  
+                  <div>
+                    <a
+                      href={cert.credlyLink || "https://www.credly.com"}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-orange-600 dark:text-orange-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors"
+                    >
+                      🏆 View Credly Badge
+                    </a>
+                  </div>
+                </div>
               </div>
             ))}
           </div>

@@ -31,22 +31,22 @@ const HomePage = ({ setCurrentPage, isDarkMode }) => {
         
         <div className="relative z-10 text-center max-w-6xl mx-auto px-6">
           {/* Main heading with improved typography */}
-          <div className="mb-8 animate-on-scroll">
-            <h1 className="text-7xl md:text-9xl font-extralight mb-4 tracking-tight text-gray-900 dark:text-white">
+          <div className="mb-6 sm:mb-8 animate-on-scroll">
+            <h1 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-extralight mb-3 sm:mb-4 tracking-tight text-gray-900 dark:text-white text-center leading-tight">
               Ajay M
             </h1>
-            <div className="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+            <div className="w-16 sm:w-24 h-1 bg-blue-600 mx-auto mb-4 sm:mb-6"></div>
           </div>
           
-          <h2 className="text-xl md:text-2xl mb-4 font-light tracking-wide animate-on-scroll text-gray-600 dark:text-gray-300">
+          <h2 className="text-base xs:text-lg sm:text-xl md:text-2xl mb-3 sm:mb-4 font-light tracking-wide animate-on-scroll text-gray-600 dark:text-gray-300 text-center px-2">
             Senior Software Engineer & Data Scientist
           </h2>
           
-          <h3 className="text-lg text-blue-600 dark:text-blue-400 mb-12 font-medium animate-on-scroll">
+          <h3 className="text-sm xs:text-base sm:text-lg text-blue-600 dark:text-blue-400 mb-8 sm:mb-12 font-medium animate-on-scroll text-center px-2 leading-relaxed">
             Robert Bosch Automotive Electronics Pvt. Ltd
           </h3>
           
-          <p className="text-lg md:text-xl mb-16 max-w-4xl mx-auto leading-relaxed font-light animate-on-scroll text-gray-600 dark:text-gray-400">
+          <p className="text-sm xs:text-base sm:text-lg md:text-xl mb-12 sm:mb-16 max-w-4xl mx-auto leading-relaxed font-light animate-on-scroll text-gray-600 dark:text-gray-400 text-center px-4 sm:px-6">
             Transforming complex data challenges into intelligent solutions through 
             <span className="text-blue-600 dark:text-blue-400 font-medium"> cutting-edge AI</span>, 
             <span className="text-purple-600 dark:text-purple-400 font-medium"> machine learning</span>, and 
@@ -54,20 +54,20 @@ const HomePage = ({ setCurrentPage, isDarkMode }) => {
           </p>
           
           {/* Clean CTA buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 animate-on-scroll">
+          <div className="flex flex-col gap-3 sm:gap-4 sm:flex-row justify-center items-center mb-8 sm:mb-12 animate-on-scroll px-4">
             <button
               onClick={() => setCurrentPage('projects')}
-              className="group px-8 py-4 rounded-xl font-medium transition-all duration-500 flex items-center gap-2 border hover:scale-105 hover:shadow-xl bg-white dark:bg-gray-800 text-gray-900 dark:text-white border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700"
+              className="group w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-medium transition-all duration-500 flex items-center justify-center gap-2 border hover:scale-105 hover:shadow-xl bg-white dark:bg-gray-800 text-gray-900 dark:text-white border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 text-sm sm:text-base"
             >
               View Projects
-              <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform duration-300" />
+              <ArrowRight size={16} className="group-hover:translate-x-2 transition-transform duration-300" />
             </button>
             
             <button
               onClick={() => setCurrentPage('contact')}
-              className="px-8 py-4 bg-blue-600 rounded-xl font-medium text-white hover:bg-blue-700 transition-all duration-500 flex items-center gap-2 hover:scale-105 hover:shadow-xl"
+              className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-blue-600 rounded-xl font-medium text-white hover:bg-blue-700 transition-all duration-500 flex items-center justify-center gap-2 hover:scale-105 hover:shadow-xl text-sm sm:text-base"
             >
-              <MessageCircle size={18} />
+              <MessageCircle size={16} />
               Get in Touch
             </button>
           </div>

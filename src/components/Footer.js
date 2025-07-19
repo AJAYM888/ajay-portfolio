@@ -5,7 +5,9 @@ const navigationItems = [
   { id: 'home', label: 'Home' },
   { id: 'about', label: 'About' },
   { id: 'experience', label: 'Experience' },
-  { id: 'projects', label: 'Projects' }
+  { id: 'projects', label: 'Projects' },
+  { id: 'skills', label: 'Skills' },
+  { id: 'contact', label: 'Contact' }
 ];
 
 const Footer = ({ setCurrentPage, copyToClipboard, isDarkMode }) => {
@@ -33,33 +35,49 @@ const Footer = ({ setCurrentPage, copyToClipboard, isDarkMode }) => {
               Passionate about building intelligent systems that solve real-world problems.
             </p>
             <div className="flex space-x-4">
-              <a href="https://linkedin.com/in/ajaym10" className={`p-3 rounded-lg transition-colors ${
-                isDarkMode 
-                  ? 'bg-gray-800 hover:bg-blue-600' 
-                  : 'bg-gray-200 hover:bg-blue-500'
-              }`}>
+              <a 
+                href="https://linkedin.com/in/ajaym10" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`p-3 rounded-lg transition-colors hover:scale-105 transform duration-200 ${
+                  isDarkMode 
+                    ? 'bg-gray-800 hover:bg-blue-600' 
+                    : 'bg-gray-200 hover:bg-blue-500'
+                }`}
+                aria-label="LinkedIn Profile"
+              >
                 <Linkedin size={20} className={`${
                   isDarkMode ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-white'
                 }`} />
               </a>
-              <a href="mailto:ajaymys2011@gmail.com" className={`p-3 rounded-lg transition-colors ${
-                isDarkMode 
-                  ? 'bg-gray-800 hover:bg-red-600' 
-                  : 'bg-gray-200 hover:bg-red-500'
-              }`}>
+              <a 
+                href="mailto:ajaymys2011@gmail.com" 
+                className={`p-3 rounded-lg transition-colors hover:scale-105 transform duration-200 ${
+                  isDarkMode 
+                    ? 'bg-gray-800 hover:bg-red-600' 
+                    : 'bg-gray-200 hover:bg-red-500'
+                }`}
+                aria-label="Send Email"
+              >
                 <Mail size={20} className={`${
                   isDarkMode ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-white'
                 }`} />
               </a>
-              <button className={`p-3 rounded-lg transition-colors ${
-                isDarkMode 
-                  ? 'bg-gray-800 hover:bg-purple-600' 
-                  : 'bg-gray-200 hover:bg-purple-500'
-              }`}>
+              <a 
+                href="https://github.com/AJAYM888" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`p-3 rounded-lg transition-colors hover:scale-105 transform duration-200 ${
+                  isDarkMode 
+                    ? 'bg-gray-800 hover:bg-gray-600' 
+                    : 'bg-gray-200 hover:bg-gray-700'
+                }`}
+                aria-label="GitHub Profile"
+              >
                 <Github size={20} className={`${
                   isDarkMode ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-white'
                 }`} />
-              </button>
+              </a>
             </div>
           </div>
           
@@ -68,11 +86,11 @@ const Footer = ({ setCurrentPage, copyToClipboard, isDarkMode }) => {
               isDarkMode ? 'text-white' : 'text-gray-900'
             }`}>Quick Links</h4>
             <div className="space-y-2">
-              {navigationItems.slice(0, 4).map((item) => (
+              {navigationItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => setCurrentPage(item.id)}
-                  className={`block transition-colors ${
+                  className={`block transition-colors hover:translate-x-1 transform duration-200 ${
                     isDarkMode 
                       ? 'text-gray-400 hover:text-blue-400' 
                       : 'text-gray-600 hover:text-blue-600'
@@ -108,13 +126,13 @@ const Footer = ({ setCurrentPage, copyToClipboard, isDarkMode }) => {
           <div className="flex items-center space-x-6">
             <button 
               onClick={() => copyToClipboard('ajaymys2011@gmail.com', 'Email')}
-              className={`transition-colors text-sm ${
+              className={`transition-colors text-sm hover:scale-105 transform duration-200 ${
                 isDarkMode 
                   ? 'text-gray-400 hover:text-blue-400' 
                   : 'text-gray-600 hover:text-blue-600'
               }`}
             >
-              Quick Email
+              Quick Email Copy
             </button>
           </div>
         </div>

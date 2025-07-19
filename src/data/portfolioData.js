@@ -248,18 +248,22 @@ export const certifications = [
     title: "Microsoft Certified: Azure Data Fundamentals",
     code: "DP-900",
     issuer: "Microsoft",
-    year: "2023",
+    year: "2021",
+    dateIssued: "May 03, 2021",
     description: "Cloud Computing & Data Fundamentals",
     verifyLink: "https://docs.microsoft.com/en-us/learn/certifications/azure-data-fundamentals/",
+    credlyLink: "https://www.credly.com/badges/68bd55f6-cd09-4cee-8a12-020e8f9eb297/public_url",
     color: "blue"
   },
   {
     title: "Microsoft Certified: Azure Fundamentals",
     code: "AZ-900", 
     issuer: "Microsoft",
-    year: "2023",
+    year: "2021",
+    dateIssued: "April 12, 2021",
     description: "Cloud Computing Fundamentals",
     verifyLink: "https://docs.microsoft.com/en-us/learn/certifications/azure-fundamentals/",
+    credlyLink: "https://www.credly.com/badges/15f1f932-feb9-4c15-a833-7c0d409b66eb?source=linked_in_profile",
     color: "indigo"
   }
 ];
