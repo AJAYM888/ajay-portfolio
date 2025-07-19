@@ -32,18 +32,18 @@ const HomePage = ({ setCurrentPage, isDarkMode }) => {
         <div className="relative z-10 text-center max-w-6xl mx-auto px-6">
           {/* Main heading with improved typography */}
           <div className="mb-6 sm:mb-8 animate-on-scroll">
-            <h1 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-extralight mb-3 sm:mb-4 tracking-tight text-gray-900 dark:text-white text-center leading-tight">
-              Ajay M
+            <h1 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-extralight mb-3 sm:mb-4 tracking-tight text-gray-900 dark:text-white text-center leading-none overflow-hidden">
+              <span className="block">Ajay M</span>
             </h1>
             <div className="w-16 sm:w-24 h-1 bg-blue-600 mx-auto mb-4 sm:mb-6"></div>
           </div>
           
-          <h2 className="text-base xs:text-lg sm:text-xl md:text-2xl mb-3 sm:mb-4 font-light tracking-wide animate-on-scroll text-gray-600 dark:text-gray-300 text-center px-2">
-            Senior Software Engineer & Data Scientist
+          <h2 className="text-base xs:text-lg sm:text-xl md:text-2xl mb-3 sm:mb-4 font-light tracking-wide animate-on-scroll text-gray-600 dark:text-gray-300 text-center px-2 leading-relaxed">
+            <span className="block">Senior Software Engineer & Data Scientist</span>
           </h2>
           
           <h3 className="text-sm xs:text-base sm:text-lg text-blue-600 dark:text-blue-400 mb-8 sm:mb-12 font-medium animate-on-scroll text-center px-2 leading-relaxed">
-            Robert Bosch Automotive Electronics Pvt. Ltd
+            <span className="block">Robert Bosch Automotive Electronics Pvt. Ltd</span>
           </h3>
           
           <p className="text-sm xs:text-base sm:text-lg md:text-xl mb-12 sm:mb-16 max-w-4xl mx-auto leading-relaxed font-light animate-on-scroll text-gray-600 dark:text-gray-400 text-center px-4 sm:px-6">
